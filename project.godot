@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Godot 0"
 run/main_scene="res://.import/Node2D.tscn"
-config/icon="res://icon.png"
+config/icon="res://sprites/icon.png"
 
 [input]
 

@@ -12,6 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	direccio = Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
 		direccio += Vector2(1, 0)
@@ -27,5 +28,13 @@ func _process(delta):
 			
 	
 	position += direccio.normalized() * velocitat * delta
-	print(position)
+	#print(position)
 
+
+func _on_personatge_area_entered(area):
+	area.modulate = Color(1, 0, 0)# Replace with function body.
+	modulate = Color(0, 1, 0)
+
+func _on_personatge_area_exited(area):
+	modulate = Color(1, 1, 1) # Replace with function body.
+	area.modulate = Color(1, 1, 1)
